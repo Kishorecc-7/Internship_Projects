@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Create Note | Notes App{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="h2 mb-1">Create Note</h1>
+            <p class="text-secondary mb-4">Add a title and content for your new note.</p>
+
+            {% if errors %}
+                <div class="alert alert-danger" role="alert">
+                    <p class="mb-1">Please correct the following:</p>
+                    <ul class="mb-0">
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <form method="post" class="card shadow-sm">
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Title</label>
+                        <input class="form-control" id="title" name="title" type="text" minlength="3" maxlength="100" value="{{ title }}" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="content">Content</label>
+                        <textarea class="form-control" id="content" name="content" rows="8" minlength="5" required>{{ content }}</textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary" type="submit">Save Note</button>
+                        <a class="btn btn-outline-secondary" href="{{ url_for('list_notes') }}">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

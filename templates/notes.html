@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}All Notes | Notes App{% endblock %}
+
+{% block content %}
+    <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 mb-4">
+        <div>
+            <h1 class="h2 mb-1">All Notes</h1>
+            <p class="text-secondary mb-0">Your saved notes appear below.</p>
+        </div>
+        <a class="btn btn-primary" href="{{ url_for('create_note') }}">Create Note</a>
+    </div>
+
+    {% if notes %}
+        <div class="row g-4">
+            {% for note in notes %}
+                <div class="col-md-6 col-lg-4">
+                    <article class="card note-card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="h5 card-title">{{ note.title }}</h2>
+                            <p class="card-text text-secondary note-preview">{{ note.content|truncate(140, True, '...') }}</p>
+                            <p class="small text-muted mt-auto mb-3">Created {{ note.created_at.strftime('%d %b %Y, %I:%M %p') }}</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="btn btn-sm btn-outline-primary" href="{{ url_for('view_note', note_id=note.id) }}">View</a>
+                                <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('edit_note', note_id=note.id) }}">Edit</a>
+                                <form method="post" action="{{ url_for('delete_note', note_id=note.id) }}" class="d-inline">
+                                    <button class="btn btn-sm btn-outline-danger" type="submit" onclick="return confirm('Delete this note permanently?');">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <section class="text-center border rounded-3 bg-light py-5 px-3">
+            <h2 class="h4">No notes yet</h2>
+            <p class="text-secondary">Create your first note to get started.</p>
+            <a class="btn btn-primary" href="{{ url_for('create_note') }}">Create Note</a>
+        </section>
+    {% endif %}
+{% endblock %}
