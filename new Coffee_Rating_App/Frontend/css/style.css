@@ -1,0 +1,246 @@
+/* ------------------------------
+   General Page Styling
+-------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5eee6;
+    color: #3e2723;
+}
+
+
+/* ------------------------------
+   Main Container
+-------------------------------- */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+
+/* ------------------------------
+   Header
+-------------------------------- */
+
+.header {
+    text-align: center;
+    background-color: #6f4e37;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.coffee-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+.header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/* ------------------------------
+   Section Heading
+-------------------------------- */
+
+main h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+
+/* ------------------------------
+   Coffee Cards Grid
+-------------------------------- */
+
+.coffee-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+
+/* ------------------------------
+   Coffee Card
+-------------------------------- */
+
+.coffee-card {
+    background-color: white;
+    border-radius: 14px;
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.2s;
+}
+
+.coffee-card:hover {
+    transform: translateY(-3px);
+}
+
+.coffee-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 22px;
+    color: #4e342e;
+}
+
+
+/* ------------------------------
+   Vote Count
+-------------------------------- */
+
+.vote-count {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.vote-number {
+    font-weight: bold;
+    color: #6f4e37;
+}
+
+
+/* ------------------------------
+   Vote Button
+-------------------------------- */
+
+.vote-button {
+    width: 100%;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #8d6e63;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.vote-button:hover {
+    background-color: #6f4e37;
+}
+
+
+/* Button when it is processing the request */
+
+.vote-button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+
+/* ------------------------------
+   Loading Message
+-------------------------------- */
+
+.loading-message {
+    text-align: center;
+
+    width: 100%;
+
+    font-size: 18px;
+    color: #6f4e37;
+}
+
+
+/* ------------------------------
+   Error Message
+-------------------------------- */
+
+.error-message {
+    text-align: center;
+
+    width: 100%;
+
+    padding: 20px;
+
+    background-color: #ffebee;
+    color: #c62828;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+
+/* ------------------------------
+   Empty Message
+-------------------------------- */
+
+.empty-message {
+    text-align: center;
+
+    width: 100%;
+
+    padding: 20px;
+
+    color: #6f4e37;
+
+    font-size: 18px;
+}
+
+
+/* ------------------------------
+   Mobile Responsive Design
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+        padding: 25px 0;
+    }
+
+    .header {
+        padding: 30px 15px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    main h2 {
+        font-size: 24px;
+    }
+
+    .coffee-grid {
+        grid-template-columns: 1fr;
+    }
+}
