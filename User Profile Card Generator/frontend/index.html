@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Create a personalized user profile card."
+    >
+
+    <title>User Profile Card Generator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>User Profile Card Generator</h1>
+
+            <p class="subtitle">
+                Enter your information below and create a personalized
+                profile card.
+            </p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <div class="app-grid">
+
+            <!-- Profile Form -->
+            <section class="form-section">
+
+                <div class="section-header">
+                    <h2>Create Your Profile</h2>
+
+                    <p>
+                        Fill in the details to generate your profile card.
+                    </p>
+                </div>
+
+                <form id="profileForm">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                            maxlength="100"
+                            autocomplete="name"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+
+                        <textarea
+                            id="bio"
+                            name="bio"
+                            rows="5"
+                            placeholder="Tell us a little about yourself..."
+                            required
+                            maxlength="500"
+                        ></textarea>
+
+                        <small>
+                            Maximum 500 characters.
+                        </small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="image-url">
+                            Profile Image URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="imageUrl"
+                            name="image_url"
+                            placeholder="https://example.com/image.jpg"
+                            required
+                        >
+
+                        <small>
+                            Enter a publicly accessible image URL.
+                        </small>
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="submit-button"
+                        class="submit-button"
+                    >
+                        Create Profile
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- Profile Card -->
+            <section class="profile-section">
+
+                <div class="section-header">
+                    <h2>Your Profile Card</h2>
+
+                    <p>
+                        Your generated profile will appear here.
+                    </p>
+                </div>
+
+
+                <!-- Status Messages -->
+                <div
+                    id="statusMessage"
+                    class="status-message"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- Profile Card Container -->
+                <div
+                    id="profileCard"
+                    class="profile-card-container"
+                >
+                    <div class="empty-state">
+
+                        <div class="empty-icon">👤</div>
+
+                        <h3>No Profile Yet</h3>
+
+                        <p>
+                            Submit the form to generate your profile card.
+                        </p>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>User Profile Card Generator</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
