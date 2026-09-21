@@ -1,0 +1,303 @@
+/* ------------------------------
+   General Page Styling
+-------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f1ea;
+
+    color: #2f2f2f;
+}
+
+
+/* ------------------------------
+   Main Container
+-------------------------------- */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 40px 0;
+}
+
+
+/* ------------------------------
+   Header
+-------------------------------- */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.quote-symbol {
+    font-size: 60px;
+
+    color: #6b5b95;
+
+    line-height: 1;
+}
+
+.header h1 {
+    margin: 10px 0;
+
+    font-size: 38px;
+
+    color: #292642;
+}
+
+.header p {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #666;
+}
+
+
+/* ------------------------------
+   Main Quote Card
+-------------------------------- */
+
+.quote-card {
+    background-color: white;
+
+    border-radius: 16px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 45px;
+}
+
+
+/* ------------------------------
+   Quote Text
+-------------------------------- */
+
+.quote-text {
+    margin: 0;
+
+    font-size: 27px;
+
+    line-height: 1.6;
+
+    color: #333;
+}
+
+
+/* ------------------------------
+   Quote Author
+-------------------------------- */
+
+.quote-author {
+    margin-top: 20px;
+
+    margin-bottom: 30px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #6b5b95;
+}
+
+
+/* ------------------------------
+   Generate Button
+-------------------------------- */
+
+.generate-button {
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #6b5b95;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.generate-button:hover {
+    background-color: #55467d;
+}
+
+
+/* Button while request is running */
+
+.generate-button:disabled {
+    background-color: #aaa;
+
+    cursor: not-allowed;
+}
+
+
+/* ------------------------------
+   Error Message
+-------------------------------- */
+
+.error-message {
+    margin-top: 20px;
+
+    color: #c62828;
+
+    font-size: 15px;
+}
+
+
+/* ------------------------------
+   History Section
+-------------------------------- */
+
+.history-section h2 {
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+    color: #292642;
+}
+
+
+/* ------------------------------
+   History Container
+-------------------------------- */
+
+.history-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* ------------------------------
+   History Card
+-------------------------------- */
+
+.history-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 20px 25px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.history-quote {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: #333;
+}
+
+.history-author {
+    margin-top: 10px;
+
+    margin-bottom: 0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #6b5b95;
+}
+
+
+/* ------------------------------
+   Loading Message
+-------------------------------- */
+
+.loading-message {
+    text-align: center;
+
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* ------------------------------
+   Empty History Message
+-------------------------------- */
+
+.empty-message {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* ------------------------------
+   Mobile Responsive Design
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+
+        padding: 25px 0;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .quote-card {
+        padding: 25px 20px;
+    }
+
+    .quote-text {
+        font-size: 21px;
+    }
+
+    .quote-author {
+        font-size: 16px;
+    }
+
+    .history-section h2 {
+        font-size: 24px;
+    }
+
+    .history-card {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quote Generator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Page Header -->
+        <header class="header">
+            <div class="quote-symbol">“</div>
+
+            <h1>Quote Generator</h1>
+
+            <p>Find a little inspiration.</p>
+        </header>
+
+
+        <!-- Main Quote Section -->
+        <main>
+
+            <section class="quote-card">
+
+                <p id="quote-text" class="quote-text">
+                    Click the button to generate a quote.
+                </p>
+
+                <p id="quote-author" class="quote-author">
+                    — Unknown
+                </p>
+
+                <button id="generate-button" class="generate-button">
+                    Generate Quote
+                </button>
+
+                <!-- Error message -->
+                <p id="error-message" class="error-message"></p>
+
+            </section>
+
+
+            <!-- Quote History -->
+            <section class="history-section">
+
+                <h2>Quote History</h2>
+
+                <div id="history-container" class="history-container">
+
+                    <p class="loading-message">
+                        Loading quote history...
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
