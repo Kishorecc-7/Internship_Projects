@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Team Availability</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Team Availability</h1>
+            <p>See who's available today</p>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message hidden">
+            Unable to update availability. Please try again.
+        </div>
+
+
+        <!-- Summary Section -->
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <div class="summary-icon">👥</div>
+
+                <div>
+                    <p class="summary-label">Total Members</p>
+                    <h2 id="total-members">0</h2>
+                </div>
+            </div>
+
+
+            <div class="summary-card available-summary">
+                <div class="summary-icon">✓</div>
+
+                <div>
+                    <p class="summary-label">Available</p>
+                    <h2 id="available-members">0</h2>
+                </div>
+            </div>
+
+
+            <div class="summary-card away-summary">
+                <div class="summary-icon">−</div>
+
+                <div>
+                    <p class="summary-label">Away</p>
+                    <h2 id="away-members">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Team Section -->
+        <section class="team-section">
+
+            <div class="section-heading">
+                <h2>Team Members</h2>
+                <p>Manage team availability</p>
+            </div>
+
+
+            <!-- Loading Message -->
+            <div id="loading-message" class="loading-message">
+                Loading team members...
+            </div>
+
+
+            <!-- Empty Message -->
+            <div id="empty-message" class="empty-message hidden">
+                No team members found.
+            </div>
+
+
+            <!-- Team Members -->
+            <div id="team-list" class="team-list">
+                <!-- Team member cards will be added using JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
